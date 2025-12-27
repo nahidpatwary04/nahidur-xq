@@ -1,5 +1,7 @@
-import { ExternalLink } from "lucide-react"
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
+import { useInView } from "@/hooks/use-in-view"
 
 const projects = [
   {
@@ -44,26 +46,35 @@ const projects = [
 ]
 
 export function Projects() {
+  const { ref, isInView } = useInView()
+
   return (
     <section id="projects" className="px-4 py-20 md:py-32">
       <div className="max-w-6xl mx-auto">
-        <div className="space-y-12">
+        <div
+          // @ts-ignore
+          ref={ref}
+          className={`space-y-12 transition-all duration-1000 ${
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
           <div>
             <h2 className="text-sm uppercase tracking-wider text-muted-foreground">Selected Projects</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project) => (
-              <Card key={project.title} className="group hover:border-primary/50 transition-colors">
+            {projects.map((project, index) => (
+              <Card
+                key={project.title}
+                className={`hover:border-primary/50 hover:shadow-lg transition-all duration-300 ${
+                  isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
                 <CardContent className="p-6 space-y-4">
-                  <div className="flex items-start justify-between">
-                    <div className="space-y-1">
-                      <h3 className="font-medium text-lg text-foreground group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">{project.year}</p>
-                    </div>
-                    <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  <div className="space-y-1">
+                    <h3 className="font-medium text-lg text-foreground">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground">{project.year}</p>
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
