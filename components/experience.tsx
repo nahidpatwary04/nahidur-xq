@@ -52,7 +52,7 @@ export function Experience() {
     <section id="experience" className="py-20 px-4">
       <div
         ref={ref}
-        className="w-[90%] mx-auto"
+        className="max-w-6xl mx-auto"
         style={{
           opacity: isInView ? 1 : 0,
           transform: isInView ? "translateY(0)" : "translateY(20px)",

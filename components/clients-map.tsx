@@ -29,7 +29,7 @@ export function ClientsMap() {
             </p>
           </div>
 
-          <div className="w-[90%] mx-auto">
+          <div className="mx-auto">
             <div className="relative w-full mx-auto aspect-[2/1] bg-gradient-to-b from-slate-900 to-slate-800 rounded-2xl border border-border p-4 md:p-8 shadow-xl overflow-hidden">
               {/* World Map Image */}
               <div className="absolute inset-0 opacity-30">

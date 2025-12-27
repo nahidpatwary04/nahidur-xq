@@ -41,7 +41,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="px-4 py-20 md:py-32 bg-muted/30">
-      <div className="w-[90%] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div
           ref={ref}
           className={`space-y-12 transition-all duration-1000 ${
