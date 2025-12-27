@@ -23,6 +23,7 @@ export function Navbar() {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
     { label: "Clients", href: "#clients" },
     { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
@@ -43,7 +44,7 @@ export function Navbar() {
         isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border/40" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-[90%] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-2 group" onClick={(e) => scrollToSection(e, "#home")}>
@@ -87,7 +88,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-background border-t border-border animate-in fade-in slide-in-from-top-2 duration-300">
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+          <div className="w-[90%] mx-auto px-4 py-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}

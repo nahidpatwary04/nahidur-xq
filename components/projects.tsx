@@ -62,7 +62,7 @@ export function Projects() {
             <h2 className="text-sm uppercase tracking-wider text-muted-foreground">Selected Projects</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <Card
                 key={project.title}

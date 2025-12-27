@@ -16,7 +16,7 @@ export function Contact() {
         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="w-[90%] mx-auto text-center space-y-8">
         <div className="space-y-4">
           <h2 className="text-sm uppercase tracking-wider text-muted-foreground">Get In Touch</h2>
           <p className="text-2xl md:text-3xl text-foreground leading-relaxed text-balance">

@@ -14,7 +14,7 @@ export function About() {
         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="w-[90%] mx-auto">
         <div className="space-y-6">
           <h2 className="text-sm uppercase tracking-wider text-muted-foreground">About</h2>
 

@@ -16,7 +16,7 @@ export function Hero() {
         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="w-[90%] mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Photo */}
           <div className="flex justify-center md:justify-end order-1 md:order-1">
